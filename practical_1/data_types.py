@@ -45,7 +45,8 @@ print("numbers")
 final_result = None
 print(final_result)
 
-#if/elif/else statement
+#If statement to check if a string is empty or not
+
 our_string = "BionformaticsGroup2"
 
 if len(our_string) == 0:
@@ -54,4 +55,18 @@ elif len(our_string) < 1:
     print("the string is non-empty")
 else: 
     print (our_string)
+
+
+## Interger check
+
+our_integer = 7
+
+if (our_integer) == 0:
+    print("The in)teger is zero")
+
+elif (our_integer) < 0:
+    print ("The interger is negative")
+
+else:
+    print ("the is greater than 0 ")
 
