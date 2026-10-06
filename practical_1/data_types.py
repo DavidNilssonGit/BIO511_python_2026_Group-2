@@ -45,3 +45,13 @@ print("numbers")
 final_result = None
 print(final_result)
 
+#if/elif/else statement
+our_string = "BionformaticsGroup2"
+
+if len(our_string == 0):
+    print("The string is empty")
+elif len(our_string) < 1:
+    print("the string is non-empty")
+else: 
+    print (our_string)
+
