@@ -14,7 +14,7 @@ seasons = list(["winter", "spring", "summer", "autumn"])
 
 
 #Boolean Types:
-
+print(5 > 3)
 
 #Binary Types:
 
