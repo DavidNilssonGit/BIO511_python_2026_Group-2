@@ -96,3 +96,22 @@ if type(my_sequence) == list or type(my_sequence) == range or type(my_sequence) 
 
 else:
     print("Wrong type for this task")
+
+
+## sample and dictionary
+read_counts = {"sample_A": 1520000, "sample_B": 830000, "sample_C": None}
+
+print("sample_A" in read_counts)
+
+sample = "sample_A"
+
+if sample not in read_counts:
+    print("Unknown sample")
+elif read_counts[sample] is None:
+    print("sequencing failed")
+
+elif sample in read_counts and read_counts[sample] > 1000000:
+    print("enough reads")
+
+else:
+    print("too few reads")
