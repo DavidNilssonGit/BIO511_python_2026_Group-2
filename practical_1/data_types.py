@@ -37,6 +37,8 @@ if 5 and 10 in my_boolean_list:
 
 #Binary Types:
 
+# Range
+numbers = range(1, 6)
 
 #None Types:
 final_result = None
