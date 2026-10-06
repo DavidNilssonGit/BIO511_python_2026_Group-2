@@ -105,6 +105,7 @@ print("sample_A" in read_counts)
 
 sample = "sample_A"
 
+# Q_1 and Q_2
 if sample not in read_counts:
     print("Unknown sample")
 elif read_counts[sample] is None:
@@ -115,3 +116,60 @@ elif sample in read_counts and read_counts[sample] > 1000000:
 
 else:
     print("too few reads")
+
+ ## Q_3 QC variable
+
+read_counts = {"sample_A": 1520000, "sample_B": 830000, "sample_C": None}
+
+print("sample_A" in read_counts)
+
+sample = "sample_A"
+
+passed_qc = True
+
+if sample not in read_counts:
+    print("Unknown sample")
+elif read_counts[sample] is None:
+    print("sequencing failed")
+
+elif read_counts[sample] > 1000000 and passed_qc:
+    print("ready for analysis")
+
+else:
+    print("too few reads")
+
+
+    
+##Extra task for GC contetnt
+
+sequence = "ATGCGTACTTAGCAAT"
+gc_count = 0
+
+if (sequence[0] =="G" or sequence[0] == "C"):
+    print("the first index of the sequenis is G or C")
+
+else:
+    print("the first index of the sequenis is not G or C")
+print("but first index of the sequnce is: " + sequence[0])
+
+if "G" in sequence or "C in sequence":
+    gc_count = sequence.count("G") + sequence.count("C")
+print (gc_count)
+
+percent_gc = (gc_count / len(sequence)) * 100
+
+print ("the percentage og the GC-content is: " + str(percent_gc) + "%")
+
+
+### Another one
+sequence_2 = "TTAGGCATGCCGATATCGGCTTA"
+gc_count_2 = 0
+
+gc_count_2 = sequence_2.count("G") + sequence_2.count("C")
+print (gc_count_2)
+
+
+percent_gc_2 = (gc_count_2 / len(sequence_2)) * 100
+print ("the percentage og the GC-content is: " + str(percent_gc_2) + "%")
+
+
