@@ -19,3 +19,6 @@ print(dictionary_value, type(dictionary_value))
 print(tuple_value, type(tuple_value)) 
 print(set_value, type(set_value)) 
 print(range_value, type(range_value))
+
+my_string = "tjenare"
+print(len(my_string))
