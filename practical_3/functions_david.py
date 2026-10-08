@@ -29,7 +29,7 @@ def count_above(seq: list, lim: int) -> int:
     # Return the final count.
     return count
 
-# Call the function we defined and store the result in the global variable count.
+# Call the function we defined:
 # Print the global count:
 print(count)
 # Call "count_above(nums, limit)" and print the returned value.
@@ -38,7 +38,30 @@ print(result)
 # Print the global count again:
 print(count)
 # The count remains unchanged as 999 because the function uses a local
-# variable count, which doesn't affect the global variable
+# variable count, which doesn't affect the global variable.
 
 
 # Exercise 2: Summarize a text:
+
+# Write a function that classifies each character in a string of text as a digit.
+# Define the function summarize_text with one argument: s.
+def summarize_text(s: str) -> str:
+    """Summarize the text by counting digits, letters, and other characters."""
+    # Create a local dictionary with keys 'digits', 'letters', and 'other'.
+    # Each key should have an initial value of 0.
+    summary = {"digits": 0, "letters": 0, "other": 0}
+    # Classify each character in s and use an if/elif/else chain:
+    for char in s:
+        if char.isdigit():
+            summary["digits"] += 1
+        elif char.isalpha():
+            summary["letters"] += 1
+        else:
+            summary["other"] += 1
+    # Return the summary dictionary.
+    return summary
+
+# Call the function we defined:
+print(summary)
+
+summary = summarize_text(text)
