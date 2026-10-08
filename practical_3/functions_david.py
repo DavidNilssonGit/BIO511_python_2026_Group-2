@@ -116,3 +116,18 @@ print(result_max)
 print(result)
 
 # aggregate(nums, "max", 100) returns None because all numbers in nums are less than 100.
+
+
+# Exercise 4: Errors and try/except:
+
+# List of values used during the exercise.
+values = ['10', '5', 'hello', '8', 'three', '2', 'BIO511']
+
+# Loop through values and convert each value to an integer using int().
+# Print each converted number.
+for value in values:
+    try:
+        number = int(value)
+        print(number)
+    except ValueError:
+        print(f"ValueError: Skipping invalidvalue: '{value}'.")
