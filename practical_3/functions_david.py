@@ -12,6 +12,7 @@ result = "unset"
 
 
 # Exercise 1: Count numbers greater than a limit
+print(f"Exercise 1: Count numbers greater than a limit:")
 
 # Define the function count_above with two parameters: seq(sequence) and lim(limit).
 def count_above(seq: list, lim: int) -> int:
@@ -28,17 +29,19 @@ def count_above(seq: list, lim: int) -> int:
 
 # Call the function we defined:
 # Print the global count:
-print(count)
+print(f"global count: {count}")
 # Call "count_above(nums, limit)" and print the returned value.
 result_1 = count_above(nums, limit)
-print(result_1)  
+print(f"result_1: {result_1}")  
 # Print the global count again:
-print(count)
+print(f"global count: {count}")
 # The count remains unchanged as 999 because the function uses a local
 # variable count, which doesn't affect the global variable.
 
+print()
 
 # Exercise 2: Summarize a text:
+print(f"Exercise 2: Summarize a text:")
 
 # Write a function that classifies each character in a string of text as a digit.
 # Define the function summarize_text with one argument: s.
@@ -59,15 +62,18 @@ def summarize_text(s: str) -> str:
     return summary
 
 # Call the function we defined:
-print(summary)
+print(f"global summary: {summary}")
 # Call "summarize_text(text)" and print the returned value.
 result_2 = summarize_text(text)
-print(result_2)
+print(f"result_2: {result_2}")
 # Print the global summary again:
-print(summary)
+print(f"global summary: {summary}")
+
+print()
 
 
 # Exercise 3: Aggregate with a mode.
+print(f"Exercise 3: Aggregate with a mode:")
 
 # Write one function that can calculate three different things,
 # depending on a mode argument.
@@ -104,21 +110,24 @@ def aggregate(seq, mode, threshold):
 
 # Call the function we defined:
 # Print the global result:
-print(result)
+print(f"global result: {result}")
 # Call "aggregate(nums, "mode", limit)" three times and print each returned value.
 result_sum = aggregate(nums, "sum", limit)
-print(result_sum)
+print(f"result_sum: {result_sum}")
 result_count = aggregate(nums, "count", limit)
-print(result_count)
+print(f"result_count: {result_count}")
 result_max = aggregate(nums, "max", limit)
-print(result_max)
+print(f"result_max: {result_max}")
 # Print the global result again:
-print(result)
+print(f"global result: {result}")
 
 # aggregate(nums, "max", 100) returns None because all numbers in nums are less than 100.
 
+print()
+
 
 # Exercise 4: Errors and try/except:
+print(f"Exercise 4: Errors and try/except:")
 
 # List of values used during the exercise.
 values = ['10', '5', 'hello', '8', 'three', '2', 'BIO511']
