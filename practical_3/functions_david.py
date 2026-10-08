@@ -1,9 +1,6 @@
 # Initial setup
 
 # Provided inputs
-from threading import local
-
-
 nums = [3, -1, 7, 2, 9, 0, 4]
 limit = 4
 text = "Room 101: bring 2 apples & 1 banana."
@@ -33,8 +30,8 @@ def count_above(seq: list, lim: int) -> int:
 # Print the global count:
 print(count)
 # Call "count_above(nums, limit)" and print the returned value.
-result = count_above(nums, limit)
-print(result)  
+result_1 = count_above(nums, limit)
+print(result_1)  
 # Print the global count again:
 print(count)
 # The count remains unchanged as 999 because the function uses a local
@@ -63,5 +60,59 @@ def summarize_text(s: str) -> str:
 
 # Call the function we defined:
 print(summary)
+# Call "summarize_text(text)" and print the returned value.
+result_2 = summarize_text(text)
+print(result_2)
+# Print the global summary again:
+print(summary)
 
-summary = summarize_text(text)
+
+# Exercise 3: Aggregate with a mode.
+
+# Write one function that can calculate three different things,
+# depending on a mode argument.
+# Define the function aggregate that takes three arguments: seq, mode, and threshold.
+def aggregate(seq, mode, threshold):
+    """ """
+    # Create a local variable named result with the starting value depending on mode.
+    if mode == "sum":
+        result = 0
+    elif mode == "count":
+        result = 0
+    elif mode == "max":
+        result = None
+    else:
+        raise ValueError("Invalid mode. Choose 'sum', 'count', or 'max'.")
+    # Loop through each number n in seq.
+    for n in seq:
+        # If n is negative, skip to the next step in the loop.
+        if n < 0:
+            continue
+        # If n is greater than threshold, update result based on mode.
+        # If mode isn't "sum" or "count", treat the mode as "max".
+        # If result is none, or n is greater than result, set result to n.
+        if n > threshold:
+            if mode == "sum":
+                result += n
+            elif mode == "count":
+                result += 1
+            else:  # mode is "max"
+                if result is None or n > result:
+                    result = n
+    # Return the final result from the function.
+    return result
+
+# Call the function we defined:
+# Print the global result:
+print(result)
+# Call "aggregate(nums, "mode", limit)" three times and print each returned value.
+result_sum = aggregate(nums, "sum", limit)
+print(result_sum)
+result_count = aggregate(nums, "count", limit)
+print(result_count)
+result_max = aggregate(nums, "max", limit)
+print(result_max)
+# Print the global result again:
+print(result)
+
+# aggregate(nums, "max", 100) returns None because all numbers in nums are less than 100.
