@@ -24,7 +24,10 @@ def main():
     print(f"Codons from the sequence: {sequence_codons}")
 
     # Here you need to call the exercise_function from premade_script_david.py
-    
+    from premade_script_david import exercise_function
     # And check the output of that function
+    result = aa_string
+    return result
+
 if __name__ == "__main__":
     main()
