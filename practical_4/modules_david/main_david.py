@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from premade_script_david.py import codons
+from premade_script_david import codons
 import argparse
 import os
 
@@ -20,9 +20,10 @@ def main():
     # We first call the function from the script, and use the input file path as an argument
     sequence_codons = codons(args.sequence)
     
-    # Here you need to check the output of the function
-    
-    # Here you need to call the exercise_function from premade_script.py
+    # Check the output of the function
+    print(f"Codons from the sequence: {sequence_codons}")
+
+    # Here you need to call the exercise_function from premade_script_david.py
     
     # And check the output of that function
 if __name__ == "__main__":
