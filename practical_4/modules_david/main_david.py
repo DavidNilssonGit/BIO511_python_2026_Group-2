@@ -26,7 +26,7 @@ def main():
     # Here you need to call the exercise_function from premade_script_david.py
     from premade_script_david import exercise_function
     # And check the output of that function
-    result = aa_string
+    result = exercise_function
     return result
 
 if __name__ == "__main__":
