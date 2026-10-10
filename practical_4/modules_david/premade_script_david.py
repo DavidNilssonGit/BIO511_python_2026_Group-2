@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+from Bio.Seq import Seq
+
+
 def codons(sequence_file):
     """A function that reads a fasta file and returns a list of codons for each sequence in the file"""
     
