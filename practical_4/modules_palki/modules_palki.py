@@ -2,14 +2,17 @@
 
 Input of the Function
 
-• codon_list: This parameter expects a list of strings, where each string is a three-nucleotide sequence triplet representing a single codon (e.g., ['ATG', 'GCC', 'ATT']).
+• codon_list: This parameter expects a list of strings, where each string is a three-nucleotide 
+sequence triplet representing a single codon (e.g., ['ATG', 'GCC', 'ATT']).
 
 What This Function Does
 
 The function translates a list of RNA/DNA codons into a continuous amino acid protein sequence string.
 • It iterates through the provided codon_list one codon at a time.
-• For each individual codon triplet, it converts it into a Biopython Seq object and calls the .translate() method to look up its corresponding single-letter amino acid symbol.
-• It casts that amino acid into a standard Python string, appends it to a growing text sequence chain (aa_string), and returns the complete protein translation.
+• For each individual codon triplet, it converts it into a Biopython Seq object and calls 
+the .translate() method to look up its corresponding single-letter amino acid symbol.
+• It casts that amino acid into a standard Python string, appends it to a growing text sequence chain (aa_string), 
+and returns the complete protein translation.
 
 """
 
