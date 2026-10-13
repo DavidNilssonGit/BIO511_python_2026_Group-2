@@ -12,8 +12,9 @@ for record in records:
     rc = record.seq.reverse_complement()  #skapar reverse transkript av sekvensen
     new_rc_seq = SeqRecord(rc, id=record.id +"_rc",
     description = "reverse complement of " + record.id)  # skapar ett seqrec och dess deskription
-    print ("reverse complement:", rc)
     print("New ID", new_rc_seq.id)
+    print ("reverse complement:", rc)
+   
 
     reverse_complement.append(new_rc_seq)
 
