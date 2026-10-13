@@ -27,6 +27,6 @@ def main():
     from premade_script_bahja import exercise_function
     # And check the output of that function
     result = exercise_function
-    return result
+    return resultt
 if __name__ == "__main__":
     main()
