@@ -13,7 +13,7 @@ for record in records:
 
     gc_record.append(copy_record)
 
-    print(record.id)
+
 SeqIO.write(gc_record, "dna_with_gc.fasta", "fasta")
 
 
