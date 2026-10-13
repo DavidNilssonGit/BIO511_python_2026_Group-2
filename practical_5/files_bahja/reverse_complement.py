@@ -7,11 +7,13 @@ records = SeqIO.parse("dna.fasta", "fasta")
 reverse_complement = []
 
 for record in records:
+    print("ID", record.id)
     print("Original", record.seq)
     rc = record.seq.reverse_complement()  #skapar reverse transkript av sekvensen
     new_rc_seq = SeqRecord(rc, id=record.id +"_rc",
     description = "reverse complement of " + record.id)  # skapar ett seqrec och dess deskription
     print ("reverse complement:", rc)
+    print("New ID", new_rc_seq.id)
 
     reverse_complement.append(new_rc_seq)
 
