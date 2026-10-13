@@ -12,4 +12,5 @@ with open("data.csv", "w") as file:
 print ("CSV file has been creates successfullt as: 'data.csv'.")
 
 with open("data.csv", "a") as file:
-    file .write(",".join(sys.argv[1:] + "\n"))
+    file.write(",".join(sys.argv[1:]) + "\n")
+print("row added successfullty.")
