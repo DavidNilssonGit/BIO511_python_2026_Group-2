@@ -1,6 +1,6 @@
 from Bio import SeqIO
 
-records = SeqIO.parse("dna_check.fasta", "fasta")
+records = SeqIO.parse("dna.fasta", "fasta")
 
 for record in records:
     print(record.id)  ## sequence id
