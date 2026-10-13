@@ -1,6 +1,5 @@
 from Bio import SeqIO
 from Bio.SeqRecord import SeqRecord   ## Stores the sequence plus the information about it
-from Bio.Seq import Seq
 
 records = SeqIO.parse("dna.fasta", "fasta")
 
@@ -19,3 +18,22 @@ for record in records:
     reverse_complement.append(new_rc_seq)
 
 SeqIO.write(reverse_complement, "dna_rc.fasta", "fasta")
+
+
+###Result
+# seq1_rc reverse complement of seq1
+# GCATGCATGCATGCATGCATGCATGCAT
+# >seq2_rc reverse complement of seq2
+# TGTAATCTGTAATCTGTAATC
+# >seq3_rc reverse complement of seq3
+# GATATCGCGATATCGCGATATCGCGATATCGCGATATCGCG
+# >seq4_rc reverse complement of seq4
+# TTTAAACCCGGGTTTAAA
+# >seq5_rc reverse complement of seq5
+# GCGCCGCGGCGCGCCGCGGCGCGCCGCGGC
+# >seq6_rc reverse complement of seq6
+# ATATATATATATATATATATAT
+# >seq7_rc reverse complement of seq7
+# TGCAACGTTGCAACGTTGCAACGTTGCAACGT
+# >seq8_rc reverse complement of seq8
+# GATCGTACGATCAGCTAGCTAGCATCAGTCAGTCATG
