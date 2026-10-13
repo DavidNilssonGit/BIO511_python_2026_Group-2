@@ -1,4 +1,4 @@
-from BIO import SeqIO
+from Bio import SeqIO
 
 records = SeqIO.parse("dna_check.fasta", "fasta")
 
