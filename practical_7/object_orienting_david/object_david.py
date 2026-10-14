@@ -83,6 +83,16 @@ class Library:
     def __init__(self):
         self.books = []
 
+    def add_book(self, book):
+        self.books.append(book)
+        book.available = True
+
+    def borrow_book(self, book, member):
+        if book in self.books and book.available
+            book.available = False
+            book.borrower = member.name 
+
+        
 
 class Member:
     def __init__(self, name):
