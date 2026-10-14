@@ -14,7 +14,8 @@ print("Cleaned dataset shape:", penguins_clean.shape)
 
 #############################################################
 
-##Plot a scatterplot using matplotlib. The plot should show flipper length on the x-axis and body mass on the y-axis. Add an informative title, xlabel and ylabel. Save the plot.
+##Plot a scatterplot using matplotlib. The plot should show flipper length on the x-axis and body mass on the y-axis. 
+# Add an informative title, xlabel and ylabel. Save the plot.
 
 
 import pandas as pd
@@ -130,3 +131,18 @@ ggsave(
 )
 
 print(p)
+
+# Histogram using plotnine
+
+Penguin_fig2_plotnine = (
+    ggplot(peng, aes(x="bill_length_mm"))
+    + geom_histogram(binwidth=2)
+    + labs(
+        title="Histogram of bill length (mm)",
+        x="Bill length (mm)",
+    )
+)
+Penguin_fig2_plotnine.save(
+    "Penguin_fig2_plotnine.jpg",
+    dpi=300
+)
